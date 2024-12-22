@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            :root{
+                --backgroundColor:rgb(91, 110, 107);
+                --backgroundColor2:#000000;
+                --textColor: white;
+            }
+            .main{
+                position: relative;
+                background-color: var(--backgroundColor2);
+                width: 200px;
+                height: 200px;
+                margin: 100px auto;
+                font-size: large;
+                transform: rotate(45deg);
+                border-bottom: 5px solid var(--textColor);
+                border-right: 5px solid var(--textColor);
+            }
+            .second{
+                padding: 10px;
+                content: "Elezero";
+                color: var(--textColor);
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                background-color: var(--backgroundColor);
+                transform: scale(1.41) translate(-71px, -37px);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: grid;
+                align-items: end;
+                border-bottom: 5PX solid var(--backgroundColor2);
+                z-index: -2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main"></div>
+        <div class="second">Elzero</div>
+    </body>
+</html>

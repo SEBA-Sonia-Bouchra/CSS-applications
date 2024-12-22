@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            p{
+                background-color: #eee;
+                width: 400px;
+                padding: 10px;
+                position: relative;
+                margin: auto;
+                margin-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                counter-increment: numbers-counter;
+            }
+            p::before{
+                content: counter(numbers-counter);
+                text-align: center;
+                color: white;
+                position: absolute;
+                padding: 10px;
+                left: -40px;
+                top: 0;
+                width: 20px;
+                background-color: rgb(255, 45, 45);
+            }
+            p::after{
+                content: "";
+                color: white;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 4px;
+                height: 100%;
+                background-color: rgb(255, 45, 45);
+            }
+        </style>
+    </head>
+    <body>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+    </body>
+</html>

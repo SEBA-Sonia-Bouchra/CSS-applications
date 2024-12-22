@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .grid {
+                background-color: #ddd;
+                padding: 20px;
+                width: 800px;
+                height: 400px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                grid-template-rows: 10% auto;
+                gap: 20px;       /*row-gap column gap*/
+                
+            }
+            .grid div{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-transform:capitalize ;
+                background-color: rgb(54, 89, 154);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .element1::before{
+                content: "element 1";
+            }
+            .element2::before{
+                content: "element 2";
+            }
+            .element3::before{
+                content: "element 3";
+            }
+            .element4::before{
+                content: "element 4";
+            }
+            .element5::before{
+                content: "element 5";
+            }
+            .element6::before{
+                content: "element 6";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="element1"></div>
+            <div class="element2"></div>
+            <div class="element3"></div>
+            <div class="element4"></div>
+            <div class="element5"></div>
+            <div class="element6"></div>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            p{
+                background-color: #eee;
+                width: 400px;
+                padding: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                position: relative;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            p .pipline{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 100%;
+                background-color: rgb(231, 45, 45);
+            }
+            p .arrow{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                margin-top: -12px;
+                width:0px;
+                height: 0px;
+                border-color: transparent rgb(231, 45, 45) transparent transparent ;
+                border-style: solid;
+                border-width: 10px;
+            }
+            p::before{
+                content: attr(data-person);
+                background-color: #dddddd;
+                position: absolute;
+                left: -90px;
+                top: 0;
+                width: 50px;
+                margin-top: 5px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p data-person="Osama">
+                <span class="arrow"></span>
+                This Is Very Very Long Comment Number One
+                <span class="pipline"></span>
+            </p>
+            <p data-person="Ahmed">
+                <span class="arrow"></span>
+                This Is Very Very Long Comment Number Two
+                <span class="pipline"></span>
+            </p>
+            
+            <p data-person="Sayed">
+                <span class="arrow"></span>
+                This Is Very Very Long Comment Number Three
+                <span class="pipline"></span>
+            </p>
+            
+        </div>
+    </body>
+</html>

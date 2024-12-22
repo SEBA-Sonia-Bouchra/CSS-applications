@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul{
+                width: 400px;
+                margin: auto;
+                font-family: Arial, Helvetica, sans-serif;
+            } 
+            .main-list{
+                list-style-type: none;
+            } 
+            .list-item{
+                background-color: #eee;
+                margin-bottom: 20px; 
+                padding: 5px;
+            } 
+            .ordered-list1{
+                list-style: decimal ;
+            } 
+            .ordered-list2{
+                list-style: upper-roman ;
+            } 
+            .unordered-list3{
+                list-style: circle inside;
+                padding-left: 0;
+            } 
+            .ordered-list1 li,
+            .ordered-list2 li,
+            .unordered-list3 li{
+                background-color: white;
+                margin-top: 5px;
+                padding: 5px;
+            } 
+        </style>
+    </head>
+    <body>
+        <ul class="main-list">
+            <li class="list-item">
+              HTML
+              <ol class="ordered-list1" start="10">
+                <li>Slim</li>
+                <li>Pugjs</li>
+                <li>HAML</li>
+              </ol>
+            </li>
+            <li class="list-item">
+              CSS
+              <ol class="ordered-list2" start="10">
+                <li>SASS</li>
+                <li>LESS</li>
+                <li>PostCSS</li>
+              </ol>
+            </li>
+            <li class="list-item">
+              JavaScript
+              <ul class="unordered-list3">
+                <li>Vuejs</li>
+                <li>Sveltejs</li>
+              </ul>
+            </li>
+          </ul>
+    </body>
+</html>

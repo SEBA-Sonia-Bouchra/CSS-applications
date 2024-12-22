@@ -1,0 +1,40 @@
+selector{
+    property1: value1;
+    property2: value2;
+}
+- the selector can be an element, a .class or an #id
+- inline style is the style within the element and have the priority
+- background properties:
+    - background-color: (color/rgb/hexcode)
+    - background-image: url("")
+    - background-repeat: repeat/no-repeat,repeat-x/repeat-y
+    - background-attachment: scrolled/fixed
+    - background-position: left-top/center.. (px,px)
+    - background-size: auto/cover/contain (px,px)
+- padding is the outside area within the element and accepts only positive values
+    - padding: top, right, bottom, left (px/%)
+- margin is the area external to the element and accepts positive and negative values
+    - margin-left , margin-top ,margin-top, margin-bottom :auto;
+- border is the frame of the element comes between margin and pudding
+    - border-width: top right bottom left
+    - border-color
+    - border-style: solid, dashed..
+    - border-radius
+- the outline is oustside the border
+- the display property can change the behavior of an element (from inline to block element or none to make an element disappear for example)
+- block
+    - takes full width if no width
+    - add line break
+    - respect padding width margin height
+    
+- inline
+    - do not add line break
+    - do not respect width height
+    - respect badding margin (just left and right)
+    - allow element before and after it
+
+- inline-block
+    - do not add line break
+    - allow element before and after it
+    - respect padding width margin height
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            div{
+                height: 200px;
+                width: 300px;
+                margin: 40px auto;
+                background-color: #eee;
+                color: rgb(9, 148, 255);
+                font-size: xx-large;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            div::before{
+                content: "";
+                height: 200px;
+                width: 300px;
+                background-color: rgb(9, 148, 255) ;
+                position: absolute;
+                transform: scale(1.02) rotate(-5deg);
+                z-index: -1;
+            }
+            div::after{
+                content: "";
+                height: 200px;
+                width: 300px;
+                background-color: rgb(240, 0, 100) ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: scale(1.02) rotate(5deg);
+                z-index: -2;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Elzero</div>
+    </body>
+</html>

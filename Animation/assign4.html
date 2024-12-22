@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                display: grid;
+                grid-template-columns: repeat(2,300px);
+                column-gap: 50px;
+            }
+            .E,
+            .L{
+                width: 300px;
+                height: 500px;
+                display: grid;
+                position: relative;
+            }
+            .E{
+                grid-template-columns: 25% repeat(4,1fr);
+                grid-template-rows: repeat(7,1fr);
+                grid-template-areas: "ver hor1 hor1 hor1 hor1" 
+                "ver . . . ."
+                "ver . . . ."
+                "ver hor2 hor2 hor2 hor2"
+                "ver . . . ."
+                "ver . . . ."
+                "ver hor3 hor3 hor3 hor3";
+            }
+            .ver,.hor1, .hor2, .hor3{
+                background-color: rgb(45, 42, 42);
+            }
+            .E .ver{
+                grid-area: ver;
+            }
+            .E .hor1{
+                grid-area: hor1;
+            }
+            .E .hor2{
+                grid-area: hor2;
+            }
+            .E .hor3{
+                grid-area: hor3;
+            }
+            .L{
+                grid-template-columns: 25% repeat(4,1fr);
+                grid-template-rows: repeat(7, 1fr);
+            }
+            .L .ver{
+                grid-column: 1;
+                grid-row: span 6;
+            }
+            .L .hor3{
+                grid-column: span 5;
+                grid-row: 7;
+            }
+            .E .anim{
+                width: 45px ;
+                height: 45px;
+                background-color: orange;
+                position: absolute;
+                top: 13px;
+                right: 13px;
+                animation-name: move;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes move {
+                0% {
+                    transform: translate(0, 0);
+                }
+                11.11% {
+                    transform: translateX(-227px);
+                }
+                22.22% {
+                    transform: translate(-227px, 214px);
+                }
+                33.33% {
+                    transform: translate(0, 214px);
+                }
+                44.44% {
+                    transform: translate(-227px, 214px);
+                }
+                55.55% {
+                    transform: translate(-227px, 428px);
+                }
+                66.66% {
+                    transform: translate(0, 428px);
+                }
+                77.77% {
+                    transform: translate(-227px, 428px);
+                }
+                88.88% {
+                    transform: translate(-227px, 0);
+                }
+                100% {
+                    transform: translate(0, 0); /* Back to starting position */
+                }
+            }
+            .L .anim{
+                width: 45px ;
+                height: 45px;
+                background-color: orange;
+                position: absolute;
+                bottom: 13px;
+                right: 13px;
+                animation-name: move-opacity;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                opacity: 0;
+            }
+            @keyframes move-opacity {
+                0%{
+                    transform: translate(0,0);
+                    opacity: 1;
+                }
+                30%{
+                    transform: translate(-227px,0);
+                    opacity: 1;
+                }
+                80%{
+                    transform: translate(-227px,-428px);
+                    opacity: 1;
+                }
+                100%{
+                    transform: translate(-227px,-428px);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="E">
+            <div class="ver"></div>
+            <div class="hor1"></div>
+            <div class="hor2"></div>
+            <div class="hor3"></div>
+            <div class="anim"></div>
+        </div>
+        <div class="L">
+            <div class="ver"></div>
+            <div class="hor3"></div>
+            <div class="anim"></div>
+        </div>
+    </body>
+</html> 

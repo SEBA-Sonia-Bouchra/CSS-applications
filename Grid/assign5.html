@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .grid {
+                background-color: #ddd;
+                padding: 20px;
+                width: 800px;
+                height: 400px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 20px;
+                align-content: space-between;
+            }
+            div{
+                background-color: rgb(194, 0, 91);
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                display: grid;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+    </body>
+</html>

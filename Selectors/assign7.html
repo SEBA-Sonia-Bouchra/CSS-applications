@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+            }
+            /* first method */
+            div:first-child div:nth-last-child(2){
+                color: red;
+            }
+            /* second method */
+            div:not(.no-need):not(.no-need-2) h3 + div:nth-child(5):not(.no-need){
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <h3>Testing</h3>
+            <div>Code</div>
+            <div>Testing</div>
+        </div>
+        <div>
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <p>Testing</p>
+            <div>Testing</div>
+            <div>Testing</div>
+        </div>
+        <div>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <div class="no-need">Testing</div>
+            <div>Testing</div>
+            <div>Testing</div>
+        </div>
+        <div class="no-need">
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <div>Testing</div>
+        </div>
+        <div class="no-need-2">
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <h3>Testing</h3>
+            <div>Testing</div>
+            <div>Testing</div>
+        </div>
+    </body>
+</html>

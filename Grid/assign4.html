@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            .grid {
+                background-color: #ddd;
+                padding: 20px;
+                width: 800px;
+                height: 400px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(6,1fr);
+                grid-template-areas: "eight eight eight"
+                                     "two two three"
+                                     "four five five"
+                                     "six five five "
+                                     "seven five five"
+                                     "one one one";
+            }
+            div{
+                display: grid;
+                background-color: rgb(18, 152, 255);
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                align-content: center;
+                justify-content: center;
+            }
+            .one{
+                grid-area: one;
+            }
+            .two{
+                grid-area: two;
+            }
+            .three{
+                grid-area: three;
+            }
+            .four{
+                grid-area: four;
+            }
+            .five{
+                grid-area: five;
+            }
+            .six{
+                grid-area: six;
+            }
+            .seven{
+                grid-area: seven;
+            }
+            .eight{
+                grid-area: eight;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+            <div class="seven">7</div>
+            <div class="eight">8</div>
+          </div>
+    </body>
+</html>

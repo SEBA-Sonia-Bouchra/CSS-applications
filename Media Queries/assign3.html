@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+            }
+            .parent{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: small;
+            }
+            .child{
+                background-color: #eee;
+                text-align: center;
+                border: solid 1px #dbdbdb;
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+
+            /* large screen */
+            @media (min-width: 1200px){
+                h3{
+                    color: rgb(0, 188, 185);
+                }
+                .child:first-child,
+                .child:last-child{
+                    width: calc(100% - 20px);
+                }
+                .child:not(:first-child,:last-child){
+                    width: calc(100% / 2 - 15px);
+                }
+            }
+            /* medium screen */
+            @media (min-width: 992px) and (max-width:1199px){
+                h3{
+                    color: red;
+                }
+                .child:first-child{
+                    width: calc(100% - 23px);
+                }
+                .child:not(:nth-child(1)){
+                    width: calc(100% / 3 - 15px);
+                }
+            }
+
+            /* small screen and mobile*/
+            @media (max-width: 991px){
+                h3{
+                    color: rgb(0, 0, 0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">
+                <h3>Product One</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="child">
+                <h3>Product Two</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="child">
+                <h3>Product Three</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="child">
+                <h3>Product Four</h3>
+                <p>This is Product</p>
+            </div>
+        </div>
+    </body>
+</html>

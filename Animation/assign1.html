@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .in{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -50px;
+                border-radius: 50%;
+                border: red 7px solid;
+                border-left-color: transparent;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                z-index: 10;
+            }
+            .mid{
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -63px;
+                margin-left: -63px;
+                border-radius: 50%;
+                border: rgb(0, 115, 255) 7px solid;
+                border-right-color: transparent;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                z-index: 5;
+            }
+            .out{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -75px;
+                margin-left: -75px;
+                border-radius: 50%;
+                border: rgb(255, 153, 0) 7px solid;
+                border-top-color: transparent;
+                transition: linear;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                z-index: 1;
+            }
+            @keyframes spin{
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            .parent:hover .in,
+            .parent:hover .mid,
+            .parent:hover .out{
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="in"></div>
+            <div class="mid"></div>
+            <div class="out"></div>
+        </div>
+    </body>
+</html> 

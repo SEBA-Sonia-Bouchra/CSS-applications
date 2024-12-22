@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elzero Web School Example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            div{
+                width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                font-size: x-large;
+                background-color: #eee;
+                text-align: center;
+                position: relative;
+                font-weight: bold;
+                letter-spacing: 5px;
+            }
+            div::first-letter{
+                color: rgb(255, 63, 63);
+            }
+            div::before{
+                content: "";
+                position: absolute;
+                width: 600px;
+                height: 8px;
+                top: -5px;
+                left: 0;
+                background: 
+                linear-gradient(
+                    to right,
+                    rgb(255, 63, 63) 20%,
+                    rgb(49, 159, 255) 20%,
+                    rgb(49, 159, 255) 40%,
+                    rgb(25, 214, 25) 40%,
+                    rgb(25, 214, 25) 60%,
+                    rgb(255, 108, 218) 60%,
+                    rgb(255, 108, 218) 80%,
+                    rgb(122, 18, 190) 80%) ;
+            }
+            div::after{
+                content: "";
+                position: absolute;
+                width: 600px;
+                height: 8px;
+                top: 65px;
+                left: 0;
+                background: 
+                linear-gradient(
+                    to right,
+                    rgb(255, 63, 63) 20%,
+                    rgb(49, 159, 255) 20%,
+                    rgb(49, 159, 255) 40%,
+                    rgb(25, 214, 25) 40%,
+                    rgb(25, 214, 25) 60%,
+                    rgb(255, 108, 218) 60%,
+                    rgb(255, 108, 218) 80%,
+                    rgb(122, 18, 190) 80%) ;
+            }
+            .left{
+                position: absolute;
+                width: 8px;
+                height: 70px;
+                top: 0;
+                left: 0;
+                background-color: rgb(255, 63, 63) ;
+            }
+            .right{
+                position: absolute;
+                width: 8px;
+                height: 70px;
+                top: 0;
+                left: 592px;
+                background-color: rgb(122, 18, 190)  ;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span class="left"></span>
+            Elzero
+            <span class="right"></span>
+        </div>
+    </body>
+</html>
