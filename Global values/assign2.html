@@ -1,0 +1,56 @@
+<!-- Global Values
+ initial
+ inherit
+ unset
+ revert
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: initial;
+            }
+            div{
+                background-color: #ddd
+                ;
+                width: 40%;
+                margin: 50px auto;
+                font-size: large;
+                padding: 30px;
+                position: relative;
+            }
+            .arrow::before{
+                content: "";
+                background-color: inherit;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            .top::before{
+                top: 0;
+                left: 50%;
+            }
+            .right::before{
+                top: 50%;
+                left: 100%;
+            }
+            .bottom::before{
+                top: 100%;
+                left: 50%;
+            }
+            .left::before{
+                top: 50%;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="arrow top">Code</div>
+        <div class="arrow right">Code</div>
+        <div class="arrow bottom">Code</div>
+        <div class="arrow left">Code</div>
+    </body>
+</html>
